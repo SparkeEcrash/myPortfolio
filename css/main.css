@@ -364,8 +364,8 @@ body {
 /* for animation to work these photos have to initially set to relative */
 
 .current-project {
-    width: 50%;
-    height: 60%;
+    width: 45%;
+    height: 55%;
     position: absolute; 
     transition: all 2s ease-in-out;
 }
@@ -373,7 +373,7 @@ body {
 
 .current-project-1 {
     top: 0;
-    left: 10%;
+    left: 11%;
     transform: rotate(-15deg);
     z-index: 20;
 }
@@ -381,20 +381,20 @@ body {
 
 .current-project-2 {
     top: 0;
-    left: 46%;
+    left: 47%;
     transform: rotate(8deg);
     z-index: 30;
 }
 
 .current-project-3 {
     top: 40%;
-    left: 3%;
+    left: 4%;
     transform: rotate(-5deg);
 }
 
 .current-project-4 {
     top: 41%;
-    left: 40%;
+    left: 41%;
     transform: rotate(38deg);
 }
 
@@ -402,6 +402,11 @@ body {
     transform: scale(1.1);
     z-index: 50;
 }
+
+/* .hide_overflow {
+    overflow-x: hidden;
+} */
+
 /* the transition property (all 2s ease-in-out) from current-project selector makes it so that transform: rotate() and z-index properties from individual class selectors change to the ones that are in the :hover selector for all of them over a span of two seconds */
 
 /* the transform: rotate(whatever degrees) frome each of the project-1,2,3,4 classes change to rotate(0) because the :hover selector has it set to rotate(0deg) by not having a value for it*/
