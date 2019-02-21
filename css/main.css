@@ -23,7 +23,9 @@ font-family: 'Luckiest Guy', cursive; */
 
 body {
     font-family: 'Permanent Marker', cursive;
-    background: #ffeed5;
+		background: #ffeed5;
+		width: 100vw;
+		height: 100vh;
 }
 
 .icon-top {
