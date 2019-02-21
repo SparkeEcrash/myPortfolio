@@ -50,6 +50,7 @@ function resizeBackground() {
 	console.log($(window.screen.height + 60));
 	bg.height( $(window.screen.height + 60));
 	console.log('it worked');
+
 }
 
 $(window).resize(resizeBackground);
