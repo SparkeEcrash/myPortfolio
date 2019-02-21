@@ -44,10 +44,12 @@ function initialize() {
       });
 }
 
-var bg = $(".item-1, .item-2, .item-3, #about, .about-progress, .current-project-photo .height-80");
+var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
 
 function resizeBackground() {
+	console.log($(window).height() + 60);
 	bg.height( $(window).height() + 60);
+	console.log('it worked');
 }
 
 $(window).resize(resizeBackground);
