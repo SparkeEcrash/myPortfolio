@@ -47,7 +47,7 @@ function initialize() {
 var bg = $(".item-1, .item-2, .item-3, #about, .about-progress, .current-project-photo .height-80");
 
 function resizeBackground() {
-    bg.height($(window).height());
+	bg.height( $(window).height() + 60);
 }
 
 $(window).resize(resizeBackground);
