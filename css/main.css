@@ -11,6 +11,16 @@ font-family: 'Baloo', cursive;
 font-family: 'Chewy', cursive;
 font-family: 'Luckiest Guy', cursive; */
 
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 body {
     font-family: 'Permanent Marker', cursive;
     background: #ffeed5;
@@ -131,7 +141,7 @@ body {
 }
 
 .item-1 {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img/taeyeon.jpg)center/cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/los_angeles.jpg)center/cover fixed no-repeat;
     /* background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -141,7 +151,7 @@ body {
 
 .item-2 {
     /* background: linear-gradient(to left, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img/monopoly.png); */
-    background: linear-gradient(to left, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img/monopoly.png) center/ cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/gityo_amiibo.jpg) center/ cover fixed no-repeat;
     /* background-position: 0px -200px;
     background-size: cover;
     background-attachment: fixed;
@@ -150,7 +160,7 @@ body {
 }
 
 .item-3 {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img/spotify.jpg)center/cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/stuff_made_by_james.jpg)center/cover fixed no-repeat;
     /* background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -216,6 +226,7 @@ body {
     background: #242424;
     transition: all 1s ease;
     clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+		height: 150px;
 }
 
 .skills-icon:hover {
@@ -232,6 +243,9 @@ body {
     color: #ffeed5
 }
 
+.skills-icon svg {
+	z-index: 1000;
+}
 
 /*########################### about section #######################*/
 
@@ -364,8 +378,8 @@ body {
 /* for animation to work these photos have to initially set to relative */
 
 .current-project {
-    width: 50%;
-    height: 60%;
+    width: 45%;
+    height: 55%;
     position: absolute; 
     transition: all 2s ease-in-out;
 }
@@ -373,7 +387,7 @@ body {
 
 .current-project-1 {
     top: 0;
-    left: 10%;
+    left: 11%;
     transform: rotate(-15deg);
     z-index: 20;
 }
@@ -381,20 +395,20 @@ body {
 
 .current-project-2 {
     top: 0;
-    left: 46%;
+    left: 47%;
     transform: rotate(8deg);
     z-index: 30;
 }
 
 .current-project-3 {
     top: 40%;
-    left: 3%;
+    left: 4%;
     transform: rotate(-5deg);
 }
 
 .current-project-4 {
     top: 41%;
-    left: 40%;
+    left: 41%;
     transform: rotate(38deg);
 }
 
@@ -402,6 +416,11 @@ body {
     transform: scale(1.1);
     z-index: 50;
 }
+
+/* .hide_overflow {
+    overflow-x: hidden;
+} */
+
 /* the transition property (all 2s ease-in-out) from current-project selector makes it so that transform: rotate() and z-index properties from individual class selectors change to the ones that are in the :hover selector for all of them over a span of two seconds */
 
 /* the transform: rotate(whatever degrees) frome each of the project-1,2,3,4 classes change to rotate(0) because the :hover selector has it set to rotate(0deg) by not having a value for it*/
@@ -410,46 +429,6 @@ body {
 
 /* the scale becomes 1.1 over two seconds but the z-index instanteously switches to 50 for current-project-3 and current-project-4 becaue they never had a z-index value to transition from*/
 
-
-/*################################### posts version one ################################*/
-
-
-/* #posts .card {
-    background: transparent;
-    border: none;
-    position: relative;
-}
-
-#posts .card-img-top {
-    border-radius: 0;
-}
-
-#posts .card-footer {
-    background: transparent;
-}
-
-.post-link {
-    color: #909090;
-    transition: all 1s ease-in-out;
-}
-
-.post-link:hover {
-    color: #f98445;
-    text-decoration: none;
-}
-
-.corner-text {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #f98445;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-}
-
-#posts .card:hover .corner-text {
-    opacity: 1;
-} */
 
 /*################################# posts version two ##############################*/
 
@@ -498,66 +477,34 @@ body {
 /* the hover effect is on the card but it still triggers the opacity transition for the class 'corner-text' */
 
 
-/*############################## contact-form ########################*/
+/*######################## reviews #######################*/
 
-#contact-form {
-    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/banner-2.jpeg)center/cover fixed no-repeat;
-    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+#reviews {
+    background: linear-gradient(rgba(249,132,69,0.7),rgba(249,132,69,0.7)),url(../img/banner-1.jpeg);
+    color: #ffffff;
 }
 
-.height-30 {
-    min-height: 30vh;
-}
-
-#contact-form h1 {
-    color: #f98445;
-}
-
-#contact-form .form-control {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #ffeed5;
-    border-radius: 0;
-    color: #f98445;
-}
-
-#contact-form .form-control::placeholder {
-    text-transform: capitalize;
-    font-size: 20px;
-    color: #ffeed5;
-}
-
-#contact-form button {
-    background: transparent;
-    border: 2px solid #ffeed5;
-    color: #ffeed5;
-    /* border-radius: 0; */
-    transition: all 1s ease-in-out;
-}
-
-#contact-form button:hover {
-    background: #f98445;
-    /* border-color: ???; */
+.customer-text h3 {
     color: #242424;
-    transform: translateY(-7px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
 }
 
-/* .about-text a {
+.customer-text h4 {
     color: #ffeed5;
-    background: #f98445;
-    border: 2px solid #ffeed5;
-    transition: all 1s;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-.about-text a:hover {
-    color: #f98445;
-    background: #ffeed5;
-    border: 2px solid #f98445;
-    transform: translateY(-7px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-} */
+.customer-text p {
+    line-height: 1.5;
+    color: #242424;
+}
+
+.customer-text span {
+    font-size: 40px;
+    color: #909090;
+}
+
+.ratings {
+    color: #909090;
+}
 
 
 /*########################### values ########################*/
@@ -601,107 +548,6 @@ body {
     transform: scale(0.9);
 }
 
-/*######################## reviews #######################*/
-
-#reviews {
-    background: linear-gradient(rgba(249,132,69,0.7),rgba(249,132,69,0.7)),url(../img/banner-1.jpeg);
-    color: #ffffff;
-}
-
-.customer-text h3 {
-    color: #242424;
-}
-
-.customer-text h4 {
-    color: #ffeed5;
-}
-
-.customer-text p {
-    line-height: 1.5;
-    color: #242424;
-}
-
-.customer-text span {
-    font-size: 40px;
-    color: #909090;
-}
-
-.ratings {
-    color: #909090;
-}
-
-
-/*######################## team ################################*/
-
-.member-container {
-    position: relative;
-    overflow: hidden;
-    background: #f98445;
-}
-
-.team-image {
-    transition: all 2s ease-in-out;
-}
-
-.member-container:hover .team-image {
-    transform: translateY(-72px);
-    opacity: 0.5;
-}
-
-.team-icons a {
-    color: #ffeed5;
-    font-size: 25px;
-    transition: color 1s ease;
-}
-
-.team-icons a:hover {
-    color: #242424;
-}
-
-.member-info {
-    transition: all 2s ease-in-out;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background: #f98445;
-    padding: 10px;
-    color: #242424;
-    margin-bottom: -140px;
-    /* this margin-bottom property makes it so that .member-info section is below the member-container */
-}
-
-.member-container:hover .member-info {
-    margin-bottom: 0;
-}
-
-.member-icon a {
-    font-size: 4rem;
-    color: #ffeed5;
-    transition: all 2s ease;
-}
-
-.member-icon a:hover {
-    text-decoration: none;
-    color: #242424;
-}
-
-/*############## number #################*/
-
-#numbers {
-    background: #f98445;
-}
-
-.number {
-    background: #f98445;
-    color: #242424;
-    transition: all 2s ease;
-}
-
-.number:hover {
-    background: #242424;
-    color: #ffeed5;
-}
 
 /*################# contact ###############*/
 

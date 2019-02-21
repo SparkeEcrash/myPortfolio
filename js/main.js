@@ -8,7 +8,6 @@ function initialize() {
     //adding background and fixed
     $(window).scroll(function() {
         let position = $(this).scrollTop();
-        console.log(position);
         if(position >= 149) {
             $('.navbar').addClass('navbar-background');
             $('.navbar').addClass('fixed-top');
