@@ -41,17 +41,51 @@ function initialize() {
     //load images first to begin isotope filtering
     $grid.imagesLoaded().progress( function() {
         $grid.isotope('layout');
-      });
+			});
+			
+
+
+			var orientationChange = function () {
+				var $element = $('.item-1, .item-2, .item-3');
+				$element.css('height', '90vh'); // Change this to your own original vh value.
+				$element.css('height', $element.height() + 'px');
+			};
+			
+			var s = screen;
+			var o = s.orientation || s.msOrientation || s.mozOrientation;
+			o.addEventListener('change', function () {
+				setTimeout(function () {
+					orientationChange();
+				}, 250);
+			}, false);
+			orientationChange();
+
+
 }
 
-var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
+// var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
 
-function resizeBackground() {
-	console.log($(window.screen.height + 60));
-	bg.height( $(window.screen.height + 60));
-	console.log('it worked');
+// function resizeBackground() {
+// 	console.log($(window.screen.height + 60));
+// 	bg.height( $(window.screen.height + 60));
+// 	console.log('it worked');
 
-}
+// }
 
-$(window).resize(resizeBackground);
-resizeBackground();
+// $(window).resize(resizeBackground);
+// resizeBackground();
+
+// var orientationChange = function () {
+// 	var $element = $('.item-1, .item-2, .item-3');
+// 	$element.css('height', '90vh'); // Change this to your own original vh value.
+// 	$element.css('height', $element.height() + 'px');
+// };
+
+// var s = screen;
+// var o = s.orientation || s.msOrientation || s.mozOrientation;
+// o.addEventListener('change', function () {
+// 	setTimeout(function () {
+// 		orientationChange();
+// 	}, 250);
+// }, false);
+// orientationChange();
