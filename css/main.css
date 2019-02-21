@@ -250,7 +250,6 @@ body {
 /*########################### about section #######################*/
 
 #about {
-    min-height: 40vh;
     background: #909090;
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
 }
@@ -290,7 +289,7 @@ body {
 
 #modal-filler {
     min-height: 50vh;
-    background: linear-gradient(to bottom, rgba(249,132,69,0.3),rgba(249,132,69,6)), url(../img/video-filler.jpeg)center/cover fixed no-repeat;
+    background: linear-gradient(to bottom, rgba(249,132,69,0.3),rgba(249,132,69,6)), url(../background-img/amiibo_video.png)center/cover fixed no-repeat;
 }
 
 #modal-filler a{
@@ -556,7 +555,7 @@ body {
 }
 
 #contact {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img/taeyeon.jpg)center/cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/los_angeles.jpg)center/cover fixed no-repeat;
 }
 
 #contact .card {

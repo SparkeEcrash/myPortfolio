@@ -43,3 +43,12 @@ function initialize() {
         $grid.isotope('layout');
       });
 }
+
+var bg = $(".item-1, .item-2, .item-3, #about, .about-progress, .current-project-photo .height-80");
+
+function resizeBackground() {
+    bg.height($(window).height());
+}
+
+$(window).resize(resizeBackground);
+resizeBackground();
