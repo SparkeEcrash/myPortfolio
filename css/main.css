@@ -23,9 +23,7 @@ font-family: 'Luckiest Guy', cursive; */
 
 body {
     font-family: 'Permanent Marker', cursive;
-		background: #ffeed5;
-		width: 100vw;
-		height: 100vh;
+    background: #ffeed5;
 }
 
 .icon-top {
@@ -138,8 +136,8 @@ body {
 .item-3 {
     /* min-height: 60vh; */
     min-height: 90vh;
-		clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
-		transition: all 1s ease;
+    clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%)
+
 }
 
 .item-1 {
