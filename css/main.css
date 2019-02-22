@@ -135,7 +135,7 @@ body {
 .item-2,
 .item-3 {
     /* min-height: 60vh; */
-    min-height: 90vh;
+
     clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%)
 
 }
