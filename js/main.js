@@ -1,3 +1,12 @@
+(function($){
+  'use strict';
+    $(window).on('load', function () {
+
+            $(".pre-loader").fadeOut("slow");
+        })
+    })
+(jQuery)
+
 $(document).ready(initialize)
 
 function initialize() {
@@ -43,18 +52,15 @@ function initialize() {
         $grid.isotope('layout');
 			});
 			
-			var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
+			// var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
 
-			function resizeBackground() {
-				console.log(window.outerHeight);
-				bg.height(window.outerHeight);
-				// bg.css('display', 'none');
-				console.log('it worked');
+			// function resizeBackground() {
+			// 	bg.height(window.outerHeight);
+			// 	// bg.css('display', 'none');
+			// }
 			
-			}
-			
-			$(window).resize(resizeBackground);
-			resizeBackground();
+			// $(window).resize(resizeBackground);
+			// resizeBackground();
 			
 
 			// var orientationChange = function () {
@@ -74,30 +80,3 @@ function initialize() {
 
 
 }
-
-// var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
-
-// function resizeBackground() {
-// 	console.log($(window.screen.height + 60));
-// 	bg.height( $(window.screen.height + 60));
-// 	console.log('it worked');
-
-// }
-
-// $(window).resize(resizeBackground);
-// resizeBackground();
-
-// var orientationChange = function () {
-// 	var $element = $('.item-1, .item-2, .item-3');
-// 	$element.css('height', '90vh'); // Change this to your own original vh value.
-// 	$element.css('height', $element.height() + 'px');
-// };
-
-// var s = screen;
-// var o = s.orientation || s.msOrientation || s.mozOrientation;
-// o.addEventListener('change', function () {
-// 	setTimeout(function () {
-// 		orientationChange();
-// 	}, 250);
-// }, false);
-// orientationChange();

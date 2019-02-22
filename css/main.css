@@ -26,6 +26,97 @@ body {
     background: #ffeed5;
 }
 
+
+
+
+
+
+
+
+.pre-loader {
+	background-color: #ffeed5;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#loader {
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #242424;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+#loader:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #f98445;
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+#loader:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #909090;
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+	0%   {
+			-webkit-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
+	}
+	100% {
+			-webkit-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	0%   {
+			-webkit-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
+	}
+	100% {
+			-webkit-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			transform: rotate(360deg);
+	}
+}
+
+
+
 .icon-top {
     background: #f98445;
 }
@@ -135,13 +226,13 @@ body {
 .item-2,
 .item-3 {
     /* min-height: 60vh; */
-
+		min-height: 90vh;
     clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%)
 
 }
 
 .item-1 {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/los_angeles.jpg)center/cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img-backgrounds/los_angeles.jpg)center/cover fixed no-repeat;
     /* background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -151,7 +242,7 @@ body {
 
 .item-2 {
     /* background: linear-gradient(to left, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img/monopoly.png); */
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/gityo_amiibo.jpg) center/ cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img-backgrounds/gityo_amiibo.jpg) center/ cover fixed no-repeat;
     /* background-position: 0px -200px;
     background-size: cover;
     background-attachment: fixed;
@@ -160,7 +251,7 @@ body {
 }
 
 .item-3 {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/stuff_made_by_james.jpg)center/cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img-backgrounds/stuff_made_by_james.jpg)center/cover fixed no-repeat;
     /* background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -276,9 +367,13 @@ body {
 
 .about-progress {
     min-height: 50vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img/video-filler.jpeg)center/cover fixed no-repeat;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img-backgrounds/coffee.jpeg)center/cover fixed no-repeat;
     outline: 5px solid #f98445;
     outline-offset: 10px;
+}
+
+.about-progress .title {
+	color: #ffeed5;
 }
 
 .progress-bar {
@@ -289,7 +384,7 @@ body {
 
 #modal-filler {
     min-height: 50vh;
-    background: linear-gradient(to bottom, rgba(249,132,69,0.3),rgba(249,132,69,6)), url(../background-img/amiibo_video.png)center/cover fixed no-repeat;
+    background: linear-gradient(to bottom, rgba(249,132,69,0.3),rgba(249,132,69,6)), url(../img-backgrounds/amiibo_video.png)center/cover fixed no-repeat;
 }
 
 #modal-filler a{
@@ -328,13 +423,13 @@ body {
 .img-container {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(249,132,69,0.9), rgba(255,238,213,0.9));
-
+		background: linear-gradient(rgba(249,132,69,0.9), rgba(255,238,213,0.9));
 }
 
 .img-container img {
     opacity: 1;
-    transition: all 2s ease-in-out;
+		transition: all 2s ease-in-out;
+		background-size: cover;
 }
 
 .img-container:hover .project-image {
@@ -479,8 +574,9 @@ body {
 /*######################## reviews #######################*/
 
 #reviews {
-    background: linear-gradient(rgba(249,132,69,0.7),rgba(249,132,69,0.7)),url(../img/banner-1.jpeg);
-    color: #ffffff;
+    background: linear-gradient(rgba(249,132,69,0.7),rgba(249,132,69,0.7)),url(../img-backgrounds/lfz_1018_cohort.jpg);
+		color: #ffffff;
+		background-size: no-repeat;
 }
 
 .customer-text h3 {
@@ -493,58 +589,22 @@ body {
 
 .customer-text p {
     line-height: 1.5;
-    color: #242424;
+		color: #242424;
 }
 
 .customer-text span {
-    font-size: 40px;
-    color: #909090;
+    font-size: 18px;
+		color: #ffeed5;
+		line-height: 1.5;
 }
 
-.ratings {
-    color: #909090;
+.min_height {
+	min-height: 300px;
+	min-width: 300px;
 }
 
-
-/*########################### values ########################*/
-
-.value {
-    position: relative;
-}
-
-.value-icon {
-    font-size: 60px;
-    color: #ffffff;
-    background: #242424;
-    padding: 25px 35px;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    transition: all 2s ease;
-}
-
-.value-number {
-    padding: 15px;
-    background: #f98445;
-    display: inline-block;
-    border-radius: 50%;
-    position: absolute;
-    font-size: 20px;
-    top: -12%;
-    left: 57%;
-    transition: all 2s ease;
-    color: #242424;
-}
-
-.value:hover .value-icon {
-    background: #f98445;
-    transform: scale(1.2);
-}
-
-.value:hover .value-number {
-    background: #242424;
-    color: #f98445;
-    transform: scale(0.9);
+#customer-slider {
+	min-height: 360px;
 }
 
 
@@ -554,32 +614,33 @@ body {
     min-height: 80vh;
 }
 
-#contact {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../background-img/los_angeles.jpg)center/cover fixed no-repeat;
-}
-
-#contact .card {
+#reviews .card {
     background: rgba(0,0,0,0.5);
     transition: all 2s ease;
 }
 
-#contact .card:hover {
+#reviews .card:hover {
     background: rgba(0,0,0,0.8);
     transition: all 2s ease;
 }
 
-#contact .card-header {
+#reviews .card-header {
     color: #f98445;
 }
 
-#contact .input-group-text {
+#reviews .input-group-text {
     background: #f98445;
     border-color: #f98445;
     color: #242424;
 }
 
-#contact .card input::placeholder {
-    color: #909090;
+#reviews .card input {
+	background: transparent;
+	color: #ffeed5;
+}
+
+#reviews .card input::placeholder {
+		color: #909090;
 }
 
 .contact-btn {
@@ -594,6 +655,9 @@ body {
     background: #f98445;
     border-color: #ffeed5;
 }
+
+
+/*################# footer ###############*/
 
 footer {
     background: #242424;
@@ -611,4 +675,11 @@ footer {
 
 footer h5 {
     color: #ffeed5;
+}
+
+@media screen and (max-width: 500px) {
+
+	/* body {
+			display: none;
+	} */
 }
