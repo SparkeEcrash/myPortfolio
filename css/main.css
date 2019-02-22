@@ -26,13 +26,6 @@ body {
     background: #ffeed5;
 }
 
-
-
-
-
-
-
-
 .pre-loader {
 	background-color: #ffeed5;
 	position: fixed;
@@ -140,7 +133,7 @@ body {
 
 .navbar {
     background: #242424;
-    padding: 10px 20px;
+    padding: 0px 20px;
     transition: padding 2s ease;
 }
 
@@ -577,6 +570,7 @@ body {
     background: linear-gradient(rgba(249,132,69,0.7),rgba(249,132,69,0.7)),url(../img-backgrounds/lfz_1018_cohort.jpg);
 		color: #ffffff;
 		background-size: no-repeat;
+		background-position: top; 
 }
 
 .customer-text h3 {
