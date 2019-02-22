@@ -225,7 +225,7 @@ body {
 }
 
 .item-1 {
-    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img-backgrounds/los_angeles.jpg)center/cover fixed no-repeat;
+    background: linear-gradient(to right, rgba(249,132,69,0.3),rgba(249,132,69,6)),url(../img-backgrounds/los_angeles_profile.png)center/cover fixed no-repeat;
     /* background-position: center;
     background-size: cover;
     background-attachment: fixed;
