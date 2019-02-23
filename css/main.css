@@ -108,8 +108,6 @@ body {
 	}
 }
 
-
-
 .icon-top {
     background: #f98445;
 }
@@ -265,6 +263,7 @@ body {
     color: #242424;
 }
 
+.home-btn,
 .banner-btn {
     color: #ffeed5;
     border: 2px solid #ffeed5;
@@ -272,6 +271,7 @@ body {
     box-shadow: 0 1px 5px rgba(0,0,0,0.7);
 }
 
+.home-btn:hover,
 .banner-btn:hover {
     color: #242424;
     background: #f98445;
@@ -327,33 +327,6 @@ body {
     color: #ffeed5
 }
 
-/*########################### video-filler ####################*/
-
-#modal-filler {
-	min-height: 50vh;
-	background: linear-gradient(to bottom, rgba(249,132,69,0.3),rgba(249,132,69,6)), url(../img-backgrounds/amiibo_video.png)center/cover fixed no-repeat;
-}
-
-#modal-filler a{
-	color: #242424;
-	font-size: 80px;
-	animation: myAnimation 3s ease infinite;
-	/* set the duration of the animation to 3 seconds */
-	/* infinite sets it so that the animation keeps looping forever */
-}
-
-@keyframes myAnimation {
-	25% {
-			color: red;
-	}
-	50% {
-	/* trigger this to finish its animation at 50% of the 3 seconds which is 1.5 seconds */
-	/* revert back to original at 100% which is at the end of 3 seconds */
-			transform: scale(1.5);  
-			/* scale(1.5) -> become 150% of its size */
-			color: #ffeed5;
-	}
-}
 
 /*########################### projects ###########################*/
 
@@ -418,7 +391,7 @@ body {
 }
 
 .project-icon a {
-	font-size: 3rem;
+	font-size: 2rem;
 	color: #ffeed5;
 	transition: all 2s ease;
 }
@@ -596,14 +569,16 @@ body {
 		color: #909090;
 }
 
-.contact-btn {
+.contact-btn,
+.review-btn {
     color: #ffeed5;
     border-color: #ffeed5;
     background: transparent;
     transition: all 1s ease-in-out;
 }
 
-.contact-btn:hover {
+.contact-btn:hover,
+.review-btn:hover {
     color: #242424;
     background: #f98445;
     border-color: #ffeed5;
@@ -635,4 +610,69 @@ footer h5 {
 	/* body {
 			display: none;
 	} */
+}
+
+
+/*########################### video-filler ####################*/
+
+#modal-filler {
+	min-height: 50vh;
+	background: linear-gradient(to bottom, rgba(249,132,69,0.3),rgba(249,132,69,6)), url(../img-backgrounds/amiibo_video.png)center/cover fixed no-repeat;
+}
+
+#modal-filler a{
+	color: #242424;
+	font-size: 80px;
+	animation: myAnimation 3s ease infinite;
+	/* set the duration of the animation to 3 seconds */
+	/* infinite sets it so that the animation keeps looping forever */
+}
+
+@keyframes myAnimation {
+	25% {
+			color: red;
+	}
+	50% {
+	/* trigger this to finish its animation at 50% of the 3 seconds which is 1.5 seconds */
+	/* revert back to original at 100% which is at the end of 3 seconds */
+			transform: scale(1.5);  
+			/* scale(1.5) -> become 150% of its size */
+			color: #ffeed5;
+	}
+}
+
+/*########################### review-modal ####################*/
+
+#sendMsgModal,
+#reviewModal {
+	border-radius: 20px;
+}
+
+.sendMsg_header,
+.review_header {
+	background-color: #f98445;
+	border-top-left-radius: .9rem;
+	border-top-right-radius: .9rem;
+}
+
+.sendMsg_body,
+.review_body {
+	background-color: #ffeed5;
+}
+
+.sendMsg_footer,
+.review_footer {
+	background-color: #f98445;
+	border-bottom-left-radius: .9rem;
+	border-bottom-right-radius: .9rem;
+} 
+
+.sendMsg_btn,
+.review_btn {
+	background-color: #ffeed5;
+}
+
+.sendMsg_content,
+.review_content {
+	border-radius: 3rem;
 }
