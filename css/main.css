@@ -132,7 +132,7 @@ body {
 .navbar {
     background: #242424;
     padding: 10px 20px;
-    transition: padding 2s ease;
+    transition: padding 1s ease;
 }
 
 .navbar-background {
@@ -355,7 +355,7 @@ body {
 }
 
 .project-image {
-	transition: all 2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .project-container:hover .project-image {
@@ -374,7 +374,7 @@ body {
 }
 
 .project-info {
-	transition: all 2s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	position: absolute;
 	width: 100%;
 	bottom: 0;
@@ -393,7 +393,7 @@ body {
 .project-icon a {
 	font-size: 2rem;
 	color: #ffeed5;
-	transition: all 2s ease;
+	transition: all 1s ease;
 }
 
 .project-icon a:hover {
@@ -529,7 +529,7 @@ body {
 	min-width: 300px;
 }
 
-#customer-slider {
+#review-slider {
 	min-height: 360px;
 }
 
@@ -542,12 +542,12 @@ body {
 
 #reviews .card {
     background: rgba(0,0,0,0.5);
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 #reviews .card:hover {
     background: rgba(0,0,0,0.8);
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 #reviews .card-header {
