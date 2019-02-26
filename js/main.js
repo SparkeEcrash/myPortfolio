@@ -67,23 +67,23 @@ function initialize() {
 		switch(id) {
 			case 'esmali':
 				name = 'Kuroash Esmali';
-				text = `A great source for help early on at LearningFuze was James Park. Whether it was just a second set of eyes on a problem or trying to devise a way to randomize contents of an array, he was eager to offer his experience from working in the industry. He has a child-like curiosity and enthusiasm for coding which allowed him to devise some unique approaches to UX/UI that blew a lot of us away. I had the chance to work alongside James on a hackathon and he's someone I'd want on my team in crunch-time.`;
+				text = 'A great source for help early on at LearningFuze was James Park. Whether it was just a second set of eyes on a problem or trying to devise a way to randomize contents of an array, he was eager to offer his experience from working in the industry. He has a child-like curiosity and enthusiasm for coding which allowed him to devise some unique approaches to UX/UI that blew a lot of us away. I had the chance to work alongside James on a hackathon and he\'s someone I\'d want on my team in crunch-time.';
 				break;
 			case 'capobianco':
 				name = 'Michael Capobianco';
-				text =`I had the privilege to work with James at Learning Fuze for our second Hackathon. James showed great determination to provide both visually pleasing applications coupled with great functionality that will surely please any user. While working with James, he demonstrated great leadership by his communication with the rest of the team to meet a common goal all while showing he is not afraid to take a challenge head on and make it his own. Overall James is a great team player and a joy to work with.`;
+				text ='I had the privilege to work with James at Learning Fuze for our second Hackathon. James showed great determination to provide both visually pleasing applications coupled with great functionality that will surely please any user. While working with James, he demonstrated great leadership by his communication with the rest of the team to meet a common goal all while showing he is not afraid to take a challenge head on and make it his own. Overall James is a great team player and a joy to work with.';
 				break;
 			case 'bae':
 				name = 'Cy Bae';
-				text = `James is an eager student when it comes to technology. He has a genuine passion for learning and the motivation to try those things on his own. It motivates the people around him to try harder and he is very helpful in creating that passionate environment. I'm confident that James will produce great results with his unique mind.`;
+				text = 'James is an eager student when it comes to technology. He has a genuine passion for learning and the motivation to try those things on his own. It motivates the people around him to try harder and he is very helpful in creating that passionate environment. I\'m confident that James will produce great results with his unique mind.';
 				break;
 			case 'quirante':
 				name = 'Justin Quirante';
-				text = `I had the honor of working with James throughout the four months I spent at LearningFuze. James is an extremely intelligent and talented developer. His drive and work ethic combined with his technical abilities allow him to effective on any project he's on. James has always shown an openness and curiosity for learning, and I am excited to see what he'll be able to accomplish in his career.`;
+				text = 'I had the honor of working with James throughout the four months I spent at LearningFuze. James is an extremely intelligent and talented developer. His drive and work ethic combined with his technical abilities allow him to effective on any project he\'s on. James has always shown an openness and curiosity for learning, and I am excited to see what he\'ll be able to accomplish in his career.';
 				break;
 			case 'brownfield':
 				name = 'Erick Brownfield';
-				text = `I met James during our time together at LearningFuze. Throughout the program, he consistently demonstrated incredible focus and work ethic. Combined with his creativity and attention to detail, he created some truly special projects that amazed fellow students. Contrasting his work, James was always smiling, quick to laugh, and open to talk. I know he will be a great asset wherever he goes.`;
+				text = 'I met James during our time together at LearningFuze. Throughout the program, he consistently demonstrated incredible focus and work ethic. Combined with his creativity and attention to detail, he created some truly special projects that amazed fellow students. Contrasting his work, James was always smiling, quick to laugh, and open to talk. I know he will be a great asset wherever he goes.';
 				break;
 			default:
 				name = '';
@@ -121,23 +121,6 @@ function initialize() {
         },1500)
     })
 
-    //init Isotope
-    let $grid = $('.grid').isotope({
-        //options
-    });
-    //filter items on button click
-    $('.filter-button-group').on('click', 'button', function() {
-        let filterValue = $(this).attr('data-filter');
-        $grid.isotope({
-            filter: filterValue
-        });
-    });
-
-    //load images first to begin isotope filtering
-    $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
-			});
-			
 		//filter items on button click
 			// var bg = $(".item-1, .item-2, .item-3, .current-project-photo .height-80");
 
@@ -193,7 +176,7 @@ function sendEmail() {
 	}
 	}).then(function(response) {
 		if(response==='success') {
-			const success_message = $('<p>').addClass('mb-0').text(`Your message has been submitted`);
+			const success_message = $('<p>').addClass('mb-0').text('Your message has been submitted');
 			$('.sendMsg_body').append(success_message);
 			$('#send-msg-name').val('');
 			$('#send-msg-phone-number').val('');
@@ -204,7 +187,7 @@ function sendEmail() {
 			$('#send-msg-button').show();
 			$('#waiting').hide();
 		} else {
-			const error_message = $('<p>').addClass('mb-0').text(`Something went wrong. Please email me at jpark1219dev@gmail.com`);
+			const error_message = $('<p>').addClass('mb-0').text('Something went wrong. Please email me at jpark1219dev@gmail.com');
 			$('.sendMsg_body').append(error_message);
 			$('#sendMsgModal').modal('show');
 			$('#send-msg-button').show();
