@@ -157,7 +157,7 @@ function sendEmail() {
 
 
 	$.ajax({
-		url: 'http://localhost:4444/sendemail',
+		url: 'api/node/sendemail',
 		data: {
 			contactname: $('input[name=contact_name]').val(),
 			contactemail: $('input[name=contact_email]').val(),
