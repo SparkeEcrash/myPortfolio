@@ -547,13 +547,15 @@ body {
     color: #242424;
 }
 
-#reviews .card input {
+#reviews .card input,
+#reviews .card textarea {
 	background: transparent;
 	color: #ffeed5;
 }
 
-#reviews .card input::placeholder {
-		color: #909090;
+#reviews .card input::placeholder,
+#reviews .card textarea::placeholder {
+    color: #909090;
 }
 
 .contact-btn,
