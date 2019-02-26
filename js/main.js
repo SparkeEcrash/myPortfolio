@@ -30,27 +30,6 @@ function initialize() {
 			name = $('#send-msg-name').val();
 		}
 
-
-		if($('#send-msg-phone-number').val() === '') {
-			send_msg_errors.push('Please enter your phone number');
-		} else {
-			let telephone_number = $('#send-msg-phone-number').val();
-			let temp_telephone_number = '';
-			
-			const regexp = /\d/;
-			telephone_number = telephone_number.split('');
-			telephone_number.forEach(function(character) {
-				if(regexp.test(character)) {
-					temp_telephone_number += character;
-				}
-			});
-			if(temp_telephone_number.length !== 10) {
-				send_msg_errors.push('Please enter only 10 digits for the Telephone Number');
-			} else {
-				telephone_number = `${temp_telephone_number.substring(0,3)}-${temp_telephone_number.substring(3,6)}-${temp_telephone_number.substring(6,10)}`;
-			}
-		}
-
 		if($('#send-msg-email').val() ==='') {
 			send_msg_errors.push('Please enter your email address');
 		} else {
@@ -67,12 +46,7 @@ function initialize() {
 
 		$('.sendMsg_body').empty();
 		if(send_msg_errors.length === 0) {
-			const success_message = $('<p>').addClass('mb-0').text(`Your message has been submitted`);
-			$('.sendMsg_body').append(success_message);
-			$('#send-msg-name').val('');
-			$('#send-msg-phone-number').val('');
-			$('#send-msg-email').val('');
-			$('#send-msg-message').val('');
+			sendEmail();
 		} else {
 			const error_list = $('<ul>').addClass('mb-0');
 			send_msg_errors.forEach(function(error) {
@@ -80,6 +54,7 @@ function initialize() {
 				error_list.append(error_item);
 			});
 			$('.sendMsg_body').append(error_list);
+			$('#sendMsgModal').modal('show');
 		}
 	})
 
@@ -189,4 +164,51 @@ function initialize() {
 			// }, false);
 			// orientationChange();
 
+}
+
+function sendEmail() {
+
+	//send email
+	$('#send-msg-button').hide();
+	$('#waiting').show();
+
+
+	$.ajax({
+		url: 'http://localhost:4444/sendemail',
+		data: {
+			contactname: $('input[name=contact_name]').val(),
+			contactemail: $('input[name=contact_email]').val(),
+			contactmessage: $('textarea[name=contact_message]').val()
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			if (XMLHttpRequest.readyState == 4) {
+					console.log('HTTP error (can be checked by XMLHttpRequest.status and XMLHttpRequest.statusText)');
+			}
+			else if (XMLHttpRequest.readyState == 0) {
+					console.log('Network error (i.e. connection refused, access denied due to CORS, etc.)');
+			}
+			else {
+					console.log('Unidentified error');
+			}
+	}
+	}).then(function(response) {
+		if(response==='success') {
+			const success_message = $('<p>').addClass('mb-0').text(`Your message has been submitted`);
+			$('.sendMsg_body').append(success_message);
+			$('#send-msg-name').val('');
+			$('#send-msg-phone-number').val('');
+			$('#send-msg-email').val('');
+			$('#send-msg-message').val('');
+
+			$('#sendMsgModal').modal('show');
+			$('#send-msg-button').show();
+			$('#waiting').hide();
+		} else {
+			const error_message = $('<p>').addClass('mb-0').text(`Something went wrong. Please email me at jpark1219dev@gmail.com`);
+			$('.sendMsg_body').append(error_message);
+			$('#sendMsgModal').modal('show');
+			$('#send-msg-button').show();
+			$('#waiting').hide();
+		}
+	})
 }

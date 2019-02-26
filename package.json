@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SparkeEcrash/myPortfolio/issues"
   },
-  "homepage": "https://github.com/SparkeEcrash/myPortfolio#readme"
+  "homepage": "https://github.com/SparkeEcrash/myPortfolio#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1"
+  }
 }

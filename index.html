@@ -767,7 +767,7 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="fas fa-user"></i></span>
 										</div>
-										<input type="text" id="send-msg-name" class="form-control form-control-lg text-capitalize" placeholder="Your Name" spellcheck="false">
+										<input name="contact_name" type="text" id="send-msg-name" class="form-control form-control-lg text-capitalize" placeholder="Your Name" spellcheck="false">
 									</div>
 									<!-- <div class="input-group my-3">
 										<div class="input-group-prepend">
@@ -779,15 +779,18 @@
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 										</div>
-										<input type="email" id="send-msg-email" class="form-control form-control-lg text-capitalize" placeholder="Email Address" spellcheck="false">
+										<input name="contact_email" type="email" id="send-msg-email" class="form-control form-control-lg text-capitalize" placeholder="Email Address" spellcheck="false">
 									</div>
 									<div class="input-group my-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text"><i class="fas fa-comment"></i></span>
 										</div>
-										<textarea id="send-msg-message" class="form-control form-control-lg" placeholder="Brief Message" spellcheck="false"></textarea>
+										<textarea name="contact_message" id="send-msg-message" class="form-control form-control-lg" placeholder="Brief Message" spellcheck="false"></textarea>
 									</div>
-									<button type="button" id="send-msg-button" class="btn btn-block btn-large text-uppercase contact-btn" data-toggle="modal" data-target="#sendMsgModal"><i class="far fa-hand-point-right mr-2"></i>Send</button>
+									<button type="button" id="send-msg-button" class="btn btn-block btn-large text-uppercase contact-btn"><i class="far fa-hand-point-right mr-2"></i>Send</button>
+									<div id="waiting">
+										<img src="./img/loading.gif" alt="">
+									</div>
 								</form>
 							</div>
 						</div> 
