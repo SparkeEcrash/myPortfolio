@@ -1,16 +1,3 @@
-@font-face {
-    font-family: 'Shadows Into Light';
-    src: url(../font/ShadowsIntoLight.ttf);
-}
-
-/* font-family: 'Shadows Into Light', cursive;
-font-family: 'Fredoka One', cursive;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Bungee', cursive;
-font-family: 'Baloo', cursive;
-font-family: 'Chewy', cursive;
-font-family: 'Luckiest Guy', cursive; */
-
 * {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
