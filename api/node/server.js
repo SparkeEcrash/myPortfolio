@@ -8,6 +8,10 @@ server.use(function(req, res, next) {
 	next();
 })
 
+server.get('/test', function(req, res) {
+	res.send('testing');
+})
+
 server.get('/sendemail', function(req, res) {
 	const sgMail = require('@sendgrid/mail');
 	sgMail.setApiKey('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');
